@@ -966,6 +966,12 @@
     end: 99999
     excl: false
   :length: 5
+'978622':
+- :range: !ruby/range
+    begin: 0
+    end: 3
+    excl: false
+  :length: 2
 '9787':
 - :range: !ruby/range
     begin: 0
@@ -2952,6 +2958,22 @@
     end: 99999
     excl: false
   :length: 5
+'9789920':
+- :range: !ruby/range
+    begin: 35
+    end: 39
+    excl: false
+  :length: 2
+- :range: !ruby/range
+    begin: 700
+    end: 799
+    excl: false
+  :length: 3
+- :range: !ruby/range
+    begin: 9500
+    end: 9999
+    excl: false
+  :length: 4
 '9789921':
 - :range: !ruby/range
     begin: 0
