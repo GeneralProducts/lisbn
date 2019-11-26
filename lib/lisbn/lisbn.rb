@@ -93,6 +93,10 @@ class Lisbn < String
     end
   end
 
+  def valid_range?
+    !parts.nil?
+  end
+
   def isbn_10_checksum
     base = isbn.length == 13 ? isbn[3..-2] : isbn[0..-2]
 

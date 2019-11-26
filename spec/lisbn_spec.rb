@@ -205,6 +205,24 @@ describe "Lisbn" do
     end
   end
 
+  describe "#valid_range?" do
+    subject { Lisbn.new("9780000000002") }
+
+    it "recognises when the ISBN13 is in an identifiable range" do
+      expect(subject.valid_range?).to be true
+    end
+
+    it "recognises when the ISBN13 is not in an identifiable range" do
+      lisbn = Lisbn.new("9780100000002")
+      expect(lisbn.valid_range?).to be false
+    end
+
+    it "recognises when the ISBN10 is in an identifiable range" do
+      lisbn = Lisbn.new("0906212731")
+      expect(subject.valid_range?).to be true
+    end
+  end
+
   describe "ranges" do
     it "skips over invalid '0-length' ranges" do
       range_lengths = Lisbn::RANGES.values.flatten.map {|v| v[:length]}
